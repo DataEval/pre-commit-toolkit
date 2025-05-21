@@ -16,13 +16,19 @@ We have recommended a set of static code analysis [rules](./python/pre-commit-co
 | [markdown-link-check](https://github.com/tcort/markdown-link-check) |checks all of the hyperlinks in a markdown text to determine if they are alive or dead|  | Current version mistake `/A/B` format as an error. |single-line format:`single-line format:` <br> command args: `-i http://example.net` |
 # Quick Start
 
-1. Installation
+1. Install Pre-Commit
  
-Just run:`pip install pre-commit`, details please refer to [pre-commit](https://pre-commit.com/)
+`pip install pre-commit`
+For detailed installation instructions, refer to the [pre-commit](https://pre-commit.com/)
 
-2. Configure
+2. Configure Hooks
+   
+Copy the configuration file to your project root:
+`cp [python/pre-commit-config.yaml](./python/pre-commit-config.yaml) <your-project-root>/.pre-commit-config.yaml`
 
-Copy [python/pre-commit-config.yaml](./python/pre-commit-config.yaml) to your project root.
-
+3. Install the git hook scripts
+   `pre-commit install`
+4. Check Code
+   `pre-commit run --all-files`
 # Citation
-In our configure,we used example form [lmdeploy](https://github.com/InternLM/lmdeploy/blob/main/.github/md-link-config.json) .
+In our configure,we used example from [lmdeploy](https://github.com/InternLM/lmdeploy/blob/main/.github/md-link-config.json) .
