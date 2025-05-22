@@ -18,20 +18,20 @@ We have recommended a set of static code analysis [rules](./python/pre-commit-co
 
 1. Install Pre-Commit
  
-`pip install pre-commit`
-For detailed installation instructions, refer to the [pre-commit](https://pre-commit.com/)
+   `pip install pre-commit`
+   For detailed installation instructions, refer to the [pre-commit](https://pre-commit.com/)
 
 2. Configure Hooks
    
-Copy the configuration file to your project root:
-`cp python/pre-commit-config.yaml <your-project-root>/.pre-commit-config.yaml`
+   Copy the configuration file to your project root:
+   `cp python/pre-commit-config.yaml <your-project-root>/.pre-commit-config.yaml`
 
 3. Install the git hook scripts
    
-`pre-commit install`
+   `pre-commit install`
 
 4. Check Code
    
-`pre-commit run --all-files`
+   `pre-commit run --all-files`
 # Citation
 In our configure,we used example from [lmdeploy](https://github.com/InternLM/lmdeploy/blob/main/.github/md-link-config.json) .
