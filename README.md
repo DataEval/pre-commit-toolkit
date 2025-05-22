@@ -1,4 +1,4 @@
-# Pre-commit-list
+# Pre-commit rule list
 
 We have recommended a set of static code analysis [rules](./python/pre-commit-config.yaml), primarily targeting repositories with Python code. For details on the checks performed by each rule and troubleshooting guidance, please refer to the table below.
 
@@ -23,15 +23,20 @@ We have recommended a set of static code analysis [rules](./python/pre-commit-co
 
 2. Configure Hooks
    
-   Copy the configuration file to your project root:
-   `cp python/pre-commit-config.yaml <your-project-root>/.pre-commit-config.yaml`
+   - First-time use
+     
+     Copy the configuration file to your project root:
+     `cp python/pre-commit-config.yaml <your-project-root>/.pre-commit-config.yaml`
+   - .pre-commit-config.yaml already exists
 
+     Select [hooks](python/pre-commit-config.yaml) not already in use by your project and add them to your .pre-commit-config.yaml file     
 3. Install the git hook scripts
    
    `pre-commit install`
 
 4. Check Code
    
-   `pre-commit run --all-files`
+   - run all hooks: `pre-commit run --all-files`
+   - run one hook: `pre-commit run <hook id> --all-files` 
 # Citation
-In our configure,we used example from [lmdeploy](https://github.com/InternLM/lmdeploy/blob/main/.github/md-link-config.json) .
+Our configuration incorporates examples from [lmdeploy](https://github.com/InternLM/lmdeploy/blob/main/.github/md-link-config.json) .
