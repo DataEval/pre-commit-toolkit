@@ -1,6 +1,6 @@
-# Pre-commit rule list
+# Pre-commit rules toolkit
 
-We have recommended a set of static code analysis [rules](./python/pre-commit-config.yaml), primarily targeting repositories with Python code. For details on the checks performed by each rule and troubleshooting guidance, please refer to the table below.
+We have recommended a set of static code analysis [python rules](./python/pre-commit-config.yaml), primarily targeting repositories with Python code. For details on the checks performed by each rule and troubleshooting guidance, please refer to the table below.
 
 | Rule                                 | Description                                 | Debug                                 | Notes                                 | Ignore Example                                  |
 | ------------------------------------ | ------------------------------------------- | ------------------------------------- | ------------------------------------- | ----------------------------------------------- |
@@ -16,20 +16,21 @@ We have recommended a set of static code analysis [rules](./python/pre-commit-co
 | [markdown-link-check](https://github.com/tcort/markdown-link-check) |checks all of the hyperlinks in a markdown text to determine if they are alive or dead|  | Current version mistake `/A/B` format as an error. |single-line format:`single-line format:` <br> command args: `-i http://example.net` |
 # Quick Start
 
-1. Install Pre-Commit
+1. Install pre-commit
  
    `pip install pre-commit`
    For detailed installation instructions, refer to the [pre-commit](https://pre-commit.com/)
 
-2. Configure Hooks
-   
-   - First-time use
+2. Configuration
+   - .pre-commit-config.yaml already exists
+
+     Select [hooks](python/pre-commit-config.yaml) not already in use by your project and add them to your .pre-commit-config.yaml file
+     
+   - if not
      
      Copy the configuration file to your project root:
      `cp python/pre-commit-config.yaml <your-project-root>/.pre-commit-config.yaml`
-   - .pre-commit-config.yaml already exists
-
-     Select [hooks](python/pre-commit-config.yaml) not already in use by your project and add them to your .pre-commit-config.yaml file     
+   
 3. Install the git hook scripts
    
    `pre-commit install`
