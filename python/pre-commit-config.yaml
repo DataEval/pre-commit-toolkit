@@ -8,7 +8,11 @@ repos:
     rev: 7.2.0
     hooks:
     -   id: flake8
-        args: ["--ignore=E722,E741,E501,E402,E203,F403,F405,W504,W503", "--max-line-length=120"]
+        args: [
+          "--select=E,F",
+          "--ignore=E741,E731,E722,E721,E501,E402,E266,E262,E203,F403,F405",
+          "--max-line-length=120"
+        ]
 -   repo: https://github.com/PyCQA/isort
     rev: 6.0.1
     hooks:
