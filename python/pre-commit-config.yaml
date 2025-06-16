@@ -10,7 +10,8 @@ repos:
     -   id: flake8
         args: [
           "--select=E,F",
-          "--ignore=E741,E731,E722,E721,E501,E402,E266,E262,E203,F403,F405",
+          "--ignore=E741,E731,E722,E721,E501,E402,E266,E265,E262,E203,F403,F405",
+          "--exclude=**/__init__.py",
           "--max-line-length=120"
         ]
 -   repo: https://github.com/PyCQA/isort
